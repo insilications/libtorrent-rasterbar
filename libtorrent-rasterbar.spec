@@ -4,7 +4,7 @@
 #
 Name     : libtorrent-rasterbar
 Version  : 1.1.13
-Release  : 2
+Release  : 3
 URL      : https://github.com/arvidn/libtorrent/releases/download/libtorrent-1_1_13/libtorrent-rasterbar-1.1.13.tar.gz
 Source0  : https://github.com/arvidn/libtorrent/releases/download/libtorrent-1_1_13/libtorrent-rasterbar-1.1.13.tar.gz
 Summary  : Bittorrent library.
