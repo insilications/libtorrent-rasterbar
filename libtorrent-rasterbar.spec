@@ -4,7 +4,7 @@
 #
 Name     : libtorrent-rasterbar
 Version  : 1.2.5
-Release  : 5
+Release  : 6
 URL      : https://github.com/arvidn/libtorrent/releases/download/libtorrent-1_2_5/libtorrent-rasterbar-1.2.5.tar.gz
 Source0  : https://github.com/arvidn/libtorrent/releases/download/libtorrent-1_2_5/libtorrent-rasterbar-1.2.5.tar.gz
 Summary  : Bittorrent library.
@@ -60,17 +60,17 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583899547
+export SOURCE_DATE_EPOCH=1592624676
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 %configure --disable-static
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1583899547
+export SOURCE_DATE_EPOCH=1592624676
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libtorrent-rasterbar
 cp %{_builddir}/libtorrent-rasterbar-1.2.5/COPYING %{buildroot}/usr/share/package-licenses/libtorrent-rasterbar/5efdc519b52b708c6cd9e57d48f017d095538388
