@@ -5,3 +5,7 @@ buildreq-cmake
 buildreq-distutils3
 openssl-dev
 openssl-staticdev
+openssl-dev
+openssl-staticdev
+zlib-dev
+zlib-staticdev

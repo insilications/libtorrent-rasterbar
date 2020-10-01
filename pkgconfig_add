@@ -3,3 +3,4 @@
 libcrypto
 libssl
 openssl
+zlib
