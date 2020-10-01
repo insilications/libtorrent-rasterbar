@@ -28,3 +28,4 @@ export MAKEFLAGS=%{?_smp_mflags}
 # export CCACHE_DIRECT=1
 # export CCACHE_SLOPPINESS=pch_defines,locale,time_macros
 # export CCACHE_DISABLE=1
+# LDFLAGS="${LDFLAGS} -Wl,--whole-archive /usr/lib64/libz.a /usr/lib64/libssl.a /usr/lib64/libcrypto.a /usr/lib64/libz.a -pthread -ldl -lm -lmvec -Wl,--no-whole-archive"

@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : libtorrent-rasterbar
 Version  : 1.2.10
-Release  : 8
+Release  : 9
 URL      : file:///insilications/build/clearlinux/packages/libtorrent-rasterbar/libtorrent-rasterbar-libtorrent-1.2.10.tar.gz
 Source0  : file:///insilications/build/clearlinux/packages/libtorrent-rasterbar/libtorrent-rasterbar-libtorrent-1.2.10.tar.gz
 Summary  : Bittorrent library.
@@ -86,7 +86,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1601583343
+export SOURCE_DATE_EPOCH=1601594253
 export GCC_IGNORE_WERROR=1
 ## altflags_pgo content
 ## pgo generate
@@ -119,6 +119,7 @@ export MAKEFLAGS=%{?_smp_mflags}
 # export CCACHE_DIRECT=1
 # export CCACHE_SLOPPINESS=pch_defines,locale,time_macros
 # export CCACHE_DISABLE=1
+# LDFLAGS="${LDFLAGS} -Wl,--whole-archive /usr/lib64/libz.a /usr/lib64/libssl.a /usr/lib64/libcrypto.a /usr/lib64/libz.a -pthread -ldl -lm -lmvec -Wl,--no-whole-archive"
 ## altflags_pgo end
 ##
 %define _lto_cflags 1
@@ -129,7 +130,7 @@ export FFLAGS="${FFLAGS_GENERATE}"
 export FCFLAGS="${FCFLAGS_GENERATE}"
 export LDFLAGS="${LDFLAGS_GENERATE}"
  %configure --enable-shared --enable-static --enable-dht --enable-encryption --enable-tests --disable-python-binding
-make  %{?_smp_mflags}   LDFLAGS="${LDFLAGS} -Wl,--whole-archive /usr/lib64/libz.a /usr/lib64/libssl.a /usr/lib64/libcrypto.a /usr/lib64/libz.a -pthread -ldl -lm -lmvec -Wl,--no-whole-archive"
+make  %{?_smp_mflags}
 
 make check || :
 make clean
@@ -139,11 +140,11 @@ export FFLAGS="${FFLAGS_USE}"
 export FCFLAGS="${FCFLAGS_USE}"
 export LDFLAGS="${LDFLAGS_USE}"
 %configure --enable-shared --enable-static --enable-dht --enable-encryption --enable-tests --disable-python-binding
-make  %{?_smp_mflags}   LDFLAGS="${LDFLAGS} -Wl,--whole-archive /usr/lib64/libz.a /usr/lib64/libssl.a /usr/lib64/libcrypto.a /usr/lib64/libz.a -pthread -ldl -lm -lmvec -Wl,--no-whole-archive"
+make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1601583343
+export SOURCE_DATE_EPOCH=1601594253
 rm -rf %{buildroot}
 %make_install
 
