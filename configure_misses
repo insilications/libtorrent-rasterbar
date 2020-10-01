@@ -1,6 +1,8 @@
-Configure miss: whether pthreads work with -lpthread
 Configure miss: whether debug build should be enabled
 Configure miss: whether invariant check should be enabled
 Configure miss: whether example files should be built
-Configure miss: whether test files should be built
+Configure miss: whether python bindings should be built
+Configure miss: whether debug build should be enabled
+Configure miss: whether invariant check should be enabled
+Configure miss: whether example files should be built
 Configure miss: whether python bindings should be built
